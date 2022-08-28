@@ -1,7 +1,10 @@
 <script>
 
 	let input = "According to a Cambridge University study, most people can read words in sentences with scrambled letters, provided the first and last letters of words are the same."
-	let output = scrambleText(input);
+	let output;
+
+	// update output whenever input is changed
+	$: output = scrambleText(input);
 
 	function rescramble() {
 		output = scrambleText(input);
